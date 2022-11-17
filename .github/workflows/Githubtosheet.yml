@@ -14,8 +14,8 @@ jobs:
         steps:
         - name: github-project-issue-to-sheets
           id: github-project-issue-to-sheets
-          uses: asharda2022/Akhi-MyTestRepo/github-project-issue-to-sheets@main
+          uses: asharda2022/github-project-issue-to-sheets@main
           with:
             google-api-service-account-credentials: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_DATA }}
-            document-id: '1b0UuGS_HXTGv-BE9dcB_58gZvo5fttyKgle0s4DmRNI'
+            document-id: '1nlPyaDOzTN5lIGBD_l5owR9Yva4f4TU5tySa54c5H2Q'
             sheet-name: 'GitHub Issues'
