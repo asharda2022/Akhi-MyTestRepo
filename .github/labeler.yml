@@ -1,0 +1,28 @@
+Small-Sized:
+    - 'Small-Sized'
+Medium-Sized:
+    - 'Medium-Sized'
+Large-Sized:
+    - 'High'
+Low-Priority:
+    - 'Low-Priority'
+Medium-Priority:
+    - 'Medium-Priority'
+High-Priority:
+    - 'High-Priority'
+Long-term:
+    - 'more than 6'
+Shopify OS Team:
+    - 'Shopify OS Team'
+Compensation Team:
+    - 'Compensation Team'
+Compensation Partners Team:
+    - 'Compensation Partners Team'
+Benefits Team:
+    - 'Benefits Team'
+Talent Management Team:
+    - 'Talent Management Team'
+Talent Operations Team:
+    - 'Talent Operations Team'
+Business Technology Team:
+    - 'Business Technology Team'
