@@ -20,11 +20,10 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install octokit request
-        run: npm install @octokit/request
+      - name: Install dependencies with npm install
+        run: |
+          npm init -y
+          npm install @actions/core @actions/github @octokit/request
 
       - name: Run script
         run: node .github/scripts/change-attribute.js
