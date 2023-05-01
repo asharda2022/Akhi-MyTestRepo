@@ -1,11 +1,11 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const { request } = require('@octokit/request');
+const token = core.getInput('GH_PERSONAL_ACCESS_TOKEN');
 
 (async () => {
   try {
     const context = github.context;
-    const token = core.getInput('GH_PERSONAL_ACCESS_TOKEN');
     const { owner, repo } = context.repo;
     const projectId = "2";
     const relationId = "Priority";
