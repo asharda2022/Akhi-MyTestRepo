@@ -76,6 +76,8 @@ const { request } = require('@octokit/request');
     await updatePriority();
 
   } catch (error) {
+    core.error("Token: " + token);
+    core.error("Token length: " + token.length);
     core.setFailed(error.message);
   }
 })();
