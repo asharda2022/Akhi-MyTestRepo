@@ -1,0 +1,13 @@
+on:
+  issues:
+    types: [labeled]
+    
+ steps:
+      - name: Update custom attribute value
+        uses: peter-evans/update-project-card@v1
+        if: ${{ contains(github.event.issue.labels.*.name, 'Low-Priority') }}
+        with:
+          project-url: "https://github.com/users/asharda2022/projects/2"
+          column-name: ToDo
+          custom-attributes: |
+            [{"name": "Priority", "value": "Low"}]
