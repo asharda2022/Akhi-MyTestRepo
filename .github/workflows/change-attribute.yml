@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update custom attribute value
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
         if: ${{ contains(github.event.issue.labels.*.name, 'Low-Priority') }}
         run:
           project-url: https://github.com/users/asharda2022/projects/2
