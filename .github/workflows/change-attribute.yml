@@ -1,4 +1,4 @@
-name: Update Custom Priority in Project
+name: Update Custom Priority in Project Based on Multiple Labels
 
 on:
   issues:
@@ -12,32 +12,41 @@ jobs:
 
     steps:
     - name: Update Custom Priority
-      uses: actions/github-script@v3
+      uses: actions/github-script@v5
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           const { context, github } = require('@actions/github');
-          const issueLabelName = context.payload.label.name;
           const { owner, repo } = context.repo;
           const projectId = "2";
           const relationId = "Priority";
           const issueId = context.issue.number;
-          
-          let newPriority;
-          const priorities = {
-            "Low-Priority": "Low",
-            "Medium-Priority": "Medium",
-            "High-Priority": "High"
-          };
-    
-          if (priorities.hasOwnProperty(issueLabelName)) {
-            newPriority = priorities[issueLabelName];
-          } else {
-            console.log('No matching label found, skipping update');
-            return;
-          }
-    
+
           async function updatePriority() {
+            const issue = await github.rest.issues.get({
+              owner,
+              repo,
+              issue_number: issueId
+            });
+
+            const priorityLabels = {
+              "Low-Priority": "Low",
+              "Medium-Priority": "Medium",
+              "High-Priority": "High"
+            };
+
+            let newPriority;
+            issue.data.labels.forEach((label) => {
+              if (priorityLabels.hasOwnProperty(label.name)) {
+                newPriority = priorityLabels[label.name];
+              }
+            });
+
+            if (!newPriority) {
+              console.log('No matching priority label found, skipping update');
+              return;
+            }
+
             const project = await github.request(`GET /projects/{project_id}`, {
               project_id: projectId,
               headers: {
@@ -45,7 +54,7 @@ jobs:
                 'Accept': 'application/vnd.github+json'
               }
             });
-    
+
             const issueCard = await github.request(`GET /repos/{owner}/{repo}/issues/{issue_number}/project_cards`, {
               owner,
               repo,
@@ -61,7 +70,7 @@ jobs:
               return;
             }
 
-            await github.request(`GET /projects/columns/cards/{card_id}/fields/{relation_id}`, {
+            await github.request(`PUT /projects/columns/cards/{card_id}/fields/{relation_id}`, {
               card_id: issueCard.data[0].id,
               relation_id: relationId,
               value: newPriority,
@@ -71,5 +80,5 @@ jobs:
               }
             });
           }
-          
+
           updatePriority();
