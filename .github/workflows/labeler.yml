@@ -1,0 +1,14 @@
+name: "Issue Labeler"
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  triage:
+    runs-on: shopify-ubuntu-latest
+    steps:
+    - uses: github/issue-labeler@v3.0 #May not be the latest version
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        configuration-path: .github/labeler.yml
+        enable-versioned-regex: 0
