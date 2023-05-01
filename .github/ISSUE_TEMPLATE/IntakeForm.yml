@@ -1,0 +1,60 @@
+name: Talent Systems Intake Form
+description: This form will be used for all new work requests coming to the Talent Systems teams for approval.
+title: "Enter TLDR Here"
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## How to use the form:
+        This form is to be used for all Talent System work requests (GSD projects, GH projects, large requests). Please complete the following steps: 
+        1. Enter a title for your work request in the title field above. 
+        2. Fill out all fields in the form. Provide lots of detail in the work description field.
+        3. Assign yourself and the project champion (if that person is not you) in the right hand menu.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: What priority level is this?
+      description: Low = Start in future cycle. Medium = Start in next cycle. High = Mission critical, start immediately.  
+      options:
+        - Low-Priority
+        - Medium-Priority
+        - High-Priority
+    validations:
+      required: true
+  - type: dropdown
+    id: functional_team
+    attributes:
+      label: What Talent Systems team(s) will you need to work with?
+      description:
+      options:
+        - Shopify OS Team
+        - Compensation Team
+        - Compensation Partners Team
+        - Benefits Team
+        - Talent Management Team
+        - Business Technology Team
+      multiple: true
+    validations:
+      required: true
+  - type: dropdown
+    id: sizing
+    attributes:
+      label: What sized work request is this?
+      description: Small = 2 week sprint. Medium = 3-6 week release. Large = Over 6 weeks, multiple releases.  
+      options:
+        - Small-Sized 
+        - Medium-Sized
+        - Large-Sized
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Details of work request
+      description: Provide a detailed description of the work you are requesting along with how it will be implemented.
+      placeholder: Fill in details here
+      value:
+    validations:
+      required: true
