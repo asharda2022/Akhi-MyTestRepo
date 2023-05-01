@@ -1,7 +1,7 @@
 name: Talent Systems Intake Form
 description: This form will be used for all new work requests coming to the Talent Systems teams for approval.
 title: "Enter TLDR Here"
-labels: ["Akhil-NewLabel"]
+labels: ['Akhil-NewLabel']
 assignees: [asharda2022]
 body:
   - type: markdown
