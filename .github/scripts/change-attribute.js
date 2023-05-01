@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const { request } = require('@octokit/request');
-const token = core.getInput('GH_PERSONAL_ACCESS_TOKEN');
+const token = core.getInput('GITHUB_TOKEN');
 
 (async () => {
   try {
