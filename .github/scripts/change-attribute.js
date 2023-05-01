@@ -11,6 +11,8 @@ const { request } = require('@octokit/request');
     const relationId = "Priority";
     const issueId = context.issue.number;
 
+    console.log("Issue ID:", issueId);
+    
     async function updatePriority() {
       const issue = await request("GET /repos/:owner/:repo/issues/:issue_number", {
         owner,
@@ -33,6 +35,9 @@ const { request } = require('@octokit/request');
           newPriority = priorityLabels[label.name];
         }
       });
+      
+      console.log("Issue:", issue.data);
+      console.log("New Priority:", newPriority);
 
       if (!newPriority) {
         console.log('No matching priority label found, skipping update');
@@ -46,6 +51,8 @@ const { request } = require('@octokit/request');
           accept: "application/vnd.github+json",
         },
       });
+      
+      console.log("Project:", project.data);
 
       const issueCard = await request("GET /repos/:owner/:repo/issues/:issue_number/project_cards", {
         owner,
@@ -56,6 +63,8 @@ const { request } = require('@octokit/request');
           accept: "application/vnd.github.inertia-preview+json",
         },
       });
+      
+      console.log("Issue Card:", issueCard.data);
 
       if (issueCard.data.length === 0) {
         console.log('Issue is not linked to any project card, skipping update');
@@ -71,6 +80,8 @@ const { request } = require('@octokit/request');
           accept: "application/vnd.github+json",
         },
       });
+      
+      console.log("Priority updated successfully");
     }
 
     await updatePriority();
