@@ -14,7 +14,7 @@ jobs:
     - name: Update Custom Priority
       uses: actions/github-script@v5
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
         script: |
           const { owner, repo } = context.repo;
           const projectId = "2";
