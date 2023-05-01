@@ -3,6 +3,7 @@ name: Update Custom Priority in Project Based on Multiple Labels
 on:
   issues:
     types:
+      - opened
       - labeled
       - unlabeled
 
