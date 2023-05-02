@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const { request } = require('@octokit/request');
-const token = core.getInput('GOOGLE_SERVICE_ACCOUNT_DATA');
+const token = process.env.GITHUB_TOKEN;
 
 (async () => {
   try {
