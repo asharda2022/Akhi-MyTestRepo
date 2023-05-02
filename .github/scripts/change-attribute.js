@@ -44,7 +44,7 @@ const token = process.env.GITHUB_TOKEN;
         return;
       }
 
-      console.log("Getting project data for:", "https://github.com/users/asharda2022/projects/"+project_id);
+      console.log("Getting project data for:", "https://github.com/users/asharda2022/projects/"+projectId);
       
       const project = await request("GET /projects/:project_id", {
         project_id: projectId,
