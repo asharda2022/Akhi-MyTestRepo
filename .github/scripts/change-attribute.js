@@ -89,6 +89,7 @@ const token = process.env.GITHUB_TOKEN;
     await updatePriority();
 
   } catch (error) {
+    console.error("Error:", error.message, error.status, error.documentation_url);
     core.error("Token: " + token);
     core.error("Token length: " + token.length);
     core.setFailed(error.message);
