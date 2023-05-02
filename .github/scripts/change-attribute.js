@@ -7,7 +7,7 @@ const token = process.env.GITHUB_TOKEN;
   try {
     const context = github.context;
     const { owner, repo } = context.repo;
-    const projectId = "2";
+    const projectId = "4";
     const relationId = "Priority";
     const issueId = context.issue.number;
 
@@ -24,9 +24,9 @@ const token = process.env.GITHUB_TOKEN;
       });
 
       const priorityLabels = {
-        "Low-Priority": "Low",
-        "Medium-Priority": "Medium",
-        "High-Priority": "High"
+        "Low-Priority": "P3",
+        "Medium-Priority": "P2",
+        "High-Priority": "P1"
       };
 
       let newPriority;
@@ -44,6 +44,8 @@ const token = process.env.GITHUB_TOKEN;
         return;
       }
 
+      console.log("Getting project data for: /projects/:project_id");
+      
       const project = await request("GET /projects/:project_id", {
         project_id: projectId,
         headers: {
