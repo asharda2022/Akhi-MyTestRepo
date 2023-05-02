@@ -17,8 +17,8 @@ jobs:
       with:
         node-version: 14
 
-    - name: Install dependencies
-      run: npm ci
+    - name: Install @octokit/request
+      run: npm install @octokit/request
 
     - name: Fetch project info
       run: node project-info.js
