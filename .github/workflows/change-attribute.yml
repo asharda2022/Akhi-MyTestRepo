@@ -28,4 +28,4 @@ jobs:
       - name: Run script
         run: node .github/scripts/change-attribute.js
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_DATA }}
