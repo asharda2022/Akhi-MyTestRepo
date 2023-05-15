@@ -80,7 +80,7 @@ body:
         - Large
     validations:
       required: true
- - type: dropdown
+  - type: dropdown
     id: workstream
     attributes:
       label: What workstream does this work belong to?
@@ -93,7 +93,7 @@ body:
         - the Book
     validations:
       required: true
- - type: dropdown
+  - type: dropdown
     id: proposedquarter
     attributes:
       label: What is the proposed quarter for this work?
