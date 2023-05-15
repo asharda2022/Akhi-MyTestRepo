@@ -58,14 +58,14 @@ body:
   - type: input
     id: start_date
     attributes:
-      label: "What is the start date (format: MM/DD/YYY)"
+      label: "What is the start date (format: MM/DD/YYYY)"
       description:
     validations:
       required: true
   - type: input
     id: target_date
     attributes:
-      label: "What is the target delivery date (format: MM/DD/YYY)"
+      label: "What is the target delivery date (format: MM/DD/YYYY)"
       description:
     validations:
       required: true
