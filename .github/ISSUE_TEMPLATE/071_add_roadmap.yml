@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         ## How to use the form:
-        This form is to be used to capture any current/future roadmap work for Shopify OS. Please complete the following steps:
+        This form is to be used to capture any future roadmap work for Shopify OS. Please complete the following steps:
         1. Enter a title for your work request in the title field above.
         2. Fill out all fields in the form.
         3. Assign yourself and the project champion (if that person is not you) in the right hand menu.
@@ -16,7 +16,7 @@ body:
     id: work_type
     attributes:
       label: What type of work are you proposing?
-      description: Writea. description of the work
+      description: Write a description of the work
       placeholder: Enter work type here
     validations:
       required: true
@@ -41,7 +41,7 @@ body:
     attributes:
       label: Provide link to the Project Brief
       description: Link of the document describing the project brief
-      placeholder: Project Brief
+      placeholder: Project Brief Link
     validations:
       required: true 
   - type: dropdown
@@ -84,7 +84,7 @@ body:
     id: workstream
     attributes:
       label: What workstream does this work belong to?
-      description: Small = 2 week sprint. Medium = 3-6 week release. Large = Over 6 weeks, multiple releases.  
+      description:   
       options:
         - Shopify Model 
         - Compensation Frameworks
