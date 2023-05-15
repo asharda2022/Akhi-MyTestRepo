@@ -1,7 +1,7 @@
 name: "OS Roadmap Intake Form"
 description: "This form will be used to record/intake and track new work for Shopify OS"
 title: "Enter TLDR Here"
-labels: ["Roadmap"]
+labels: ['Roadmap']
 assignees: []
 body:
   - type: markdown
