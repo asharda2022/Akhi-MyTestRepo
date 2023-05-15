@@ -55,17 +55,17 @@ body:
         - High
     validations:
       required: true
-  - type: date
+  - type: input
     id: start_date
     attributes:
-      label: What is the start date
+      label: What is the start date (format: MM/DD/YYY)
       description:
     validations:
       required: true
-  - type: date
+  - type: input
     id: target_date
     attributes:
-      label: What is the target delivery date
+      label: What is the target delivery date (format: MM/DD/YYY)
       description:
     validations:
       required: true
