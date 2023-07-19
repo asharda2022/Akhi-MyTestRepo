@@ -11,7 +11,7 @@ body:
         This form is to be used to capture any risks, issues or blockers related to the Move Shopify to SDP mission. Please complete the following steps:
         1. Enter a title for your work request in the title field above.
         2. Fill out all fields in the form.
-        3. Assign the issue to the [Ops Support Lead](https://docs.google.com/document/d/1dS6f4l4XFXJDEFx2DwhQhd8H6kosssq2ZkyPqSOJtuk/edit#heading=h.9gx5ztc5pz3t]) from your area in the right hand menu.
+        3. Assign the issue to the [Ops Support Lead](https://docs.google.com/document/d/1dS6f4l4XFXJDEFx2DwhQhd8H6kosssq2ZkyPqSOJtuk/edit#heading=h.9gx5ztc5pz3t) from your area in the right hand menu.
   - type: textarea
     id: work_type
     attributes:
