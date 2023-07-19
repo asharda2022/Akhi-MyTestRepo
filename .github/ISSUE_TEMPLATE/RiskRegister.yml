@@ -1,0 +1,77 @@
+name: Risk Register
+description: As part of the Move Shopify to SDP migration mission, this form will intake and track all risks, issues, blockers related to the migration
+title: "Enter TLDR Here"
+labels: ['Triage', 'RR']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## How to use the form:
+        This form is to be used to capture any risks, issues or blockers related to the Move Shopify to SDP mission. Please complete the following steps:
+        1. Enter a title for your work request in the title field above.
+        2. Fill out all fields in the form.
+        3. Assign the issue to the [Ops Support Lead](https://docs.google.com/document/d/1dS6f4l4XFXJDEFx2DwhQhd8H6kosssq2ZkyPqSOJtuk/edit#heading=h.9gx5ztc5pz3t]) from your area in the right hand menu.
+  - type: textarea
+    id: work_type
+    attributes:
+      label: Description
+      description: Write a description of the risk, issue, blocker
+      placeholder: Enter description here
+    validations:
+      required: true
+- type: dropdown
+    id: Criticality
+    attributes:
+      label: What is the criticality of the issue?
+      description: Urgent = Blocker (Currently blocking P0 migration jobs), High = Issue (Has the potential to block the team very soon), Medium or Low = Risk (raising the alarm early on)
+      options:
+        - Urgent
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+ - type: dropdown
+    id: pillar
+    attributes:
+      label: What pillar is reporting this issue?
+      description:   
+      options:
+        - Core 
+        - Merchant Services
+        - Corporate Data
+        - Commercial Data
+        - Infrastructure
+        - Analytics Engineering
+    validations:
+      required: true
+- type: input
+    id: teamname
+    attributes:
+      label: Which team? 
+      description: Name of team within the pillar (if you'd like to be specific). 
+      placeholder: Team Name
+    validations:
+      required: false
+- type: input
+    id: requester
+    attributes:
+      label: Who is reporting the issue? 
+      description: Name of individual(so we can reach out for further details or issue resolution, etc.) 
+      placeholder: Name of requester
+    validations:
+      required: true
+  - type: dropdown
+    id: escalateto
+    attributes:
+      label: According to you, who should this be escalated to?
+      description:   
+      options:
+        - Area Champion
+        - Area/Team Director
+        - Analytics Engineering
+        - SDP Team (DPE)
+        - Nell Thomas
+    validations:
+      required: true
