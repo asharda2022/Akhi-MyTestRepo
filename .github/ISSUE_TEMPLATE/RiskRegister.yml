@@ -1,7 +1,7 @@
 name: Risk Register
 description: As part of the Move Shopify to SDP migration mission, this form will intake and track all risks, issues, blockers related to the migration
 title: "Enter TLDR Here"
-labels: ['Triage', 'RR']
+labels: ['Triage','RR']
 assignees: []
 body:
   - type: markdown
