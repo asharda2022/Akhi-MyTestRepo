@@ -1,10 +1,10 @@
-Urgent:
+Blocker:
     - 'Urgent'
-High:
+Issue:
     - 'High'
-Medium:
+High-Risk:
     - 'Medium'
-Low:
+Low-Risk:
     - 'Low'
 Core:
     - 'Core'
