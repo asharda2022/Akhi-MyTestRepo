@@ -20,11 +20,11 @@ Infrastructure:
     - 'Infrastructure'
 Area Champion:
     - 'Area Champion'
-Area/Team Director:
-    - 'Director'
-Analytics Engineering:
-    - 'AE'
-SDP Team (DPE):
-    - 'SDP'
-Nell Thomas:
-    - 'Nell'
+Director:
+    - 'Area/Team Director'
+AE:
+    - 'Analytics Engineering'
+SDP:
+    - 'SDP Team (DPE)'
+Nell:
+    - 'Nell Thomas'
