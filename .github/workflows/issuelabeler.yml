@@ -1,4 +1,4 @@
-name: "Issue Labeler"
+name: "Risk Register Labeler"
 on:
   issues:
     types: [opened]
