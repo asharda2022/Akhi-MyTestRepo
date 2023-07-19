@@ -36,7 +36,6 @@ body:
     id: pillar
     attributes:
       label: What pillar is reporting this issue?
-      description:   
       options:
         - Core 
         - Merchant Services
@@ -66,7 +65,6 @@ body:
     id: escalateto
     attributes:
       label: According to you, who should this be escalated to?
-      description:   
       options:
         - Area Champion
         - Area/Team Director
