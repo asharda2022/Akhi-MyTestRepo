@@ -1,0 +1,30 @@
+Urgent:
+    - 'Urgent'
+High:
+    - 'High'
+Medium:
+    - 'Medium'
+Low:
+    - 'Low'
+Core:
+    - 'Core'
+Merchant Services:
+    - 'Merchant Services'
+Corporate Data:
+    - 'Corporate Data'
+Commercial Data:
+    - 'Commercial Data'
+Analytics Engineering:
+    - 'Analytics Engineering'
+Infrastructure:
+    - 'Infrastructure'
+Area Champion:
+    - 'Area Champion'
+Team/Area Director:
+    - 'Director'
+Analytics Engineering:
+    - 'AE'
+SDP Team (DPE):
+    - 'SDP'
+Nell Thomas:
+    - 'Nell'
