@@ -43,6 +43,7 @@ body:
         - Commercial Data
         - Infrastructure
         - Analytics Engineering
+        - Other
     validations:
       required: true
   - type: input
