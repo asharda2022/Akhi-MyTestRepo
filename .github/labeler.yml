@@ -1,4 +1,4 @@
-Blocker:
+alBlocker:
     - 'Urgent'
 Issue:
     - 'High'
@@ -18,13 +18,13 @@ Analytics Engineering:
     - 'Analytics Engineering'
 Infrastructure:
     - 'Infrastructure'
-Area Champion:
+EscalateTo-AreaChampion:
     - 'Area Champion'
-Director:
+EscalateTo-Director:
     - 'Area/Team Director'
-AE:
+EscalateTo-AE:
     - 'Analytics Engineering'
-SDP:
+EscalateTo-SDP:
     - 'SDP Team (DPE)'
-Nell:
+EscalateTo-Nell:
     - 'Nell Thomas'
