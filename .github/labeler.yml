@@ -25,7 +25,7 @@ EscalateTo-AreaChampion:
 EscalateTo-Director:
     - 'Area/Team Director'
 EscalateTo-AE:
-    - 'Analytics Engineering (AE)'
+    - 'AE (Analytics Engineering)'
 EscalateTo-SDP:
     - 'SDP Team (DPE)'
 EscalateTo-Nell:
