@@ -35,14 +35,14 @@ body:
   - type: dropdown
     id: pillar
     attributes:
-      label: What pillar is reporting this issue?
+      label: What area/pillar is reporting this issue?
       options:
         - Core 
         - Merchant Services
         - Corporate Data
         - Commercial Data
         - Infrastructure
-        - Analytics Engineering
+        - Data
     validations:
       required: true
   - type: input
