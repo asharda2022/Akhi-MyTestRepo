@@ -25,8 +25,8 @@ EscalateTo-AreaChampion:
 EscalateTo-Director:
     - 'Area/Team Director'
 EscalateTo-AE:
-    - 'AE (Auggie Team)'
+    - 'AE/Auggie Team'
 EscalateTo-SDP:
-    - 'SDP (DPE Team)'
+    - 'SDP/DPE Team'
 EscalateTo-Nell:
     - 'Nell Thomas'
