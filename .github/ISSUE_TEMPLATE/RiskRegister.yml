@@ -42,7 +42,7 @@ body:
         - Corporate Data
         - Commercial Data
         - Infrastructure
-        - Data
+        - Analytics Engineering
     validations:
       required: true
   - type: input
@@ -68,7 +68,7 @@ body:
       options:
         - Area Champion
         - Area/Team Director
-        - Analytics Engineering
+        - Analytics Engineering (AE)
         - SDP Team (DPE)
         - Nell Thomas
     validations:
