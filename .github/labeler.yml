@@ -1,4 +1,4 @@
-alBlocker:
+Blocker:
     - 'Urgent'
 Issue:
     - 'High'
@@ -14,8 +14,6 @@ Corporate Data:
     - 'Corporate Data'
 Commercial Data:
     - 'Commercial Data'
-Analytics Engineering:
-    - 'Analytics Engineering'
 Infrastructure:
     - 'Infrastructure'
 EscalateTo-AreaChampion:
