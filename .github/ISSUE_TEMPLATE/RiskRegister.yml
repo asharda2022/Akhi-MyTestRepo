@@ -69,8 +69,8 @@ body:
       options:
         - Area Champion
         - Area/Team Director
-        - AE (Auggie Team)
-        - SDP (DPE Team)
+        - AE/Auggie Team
+        - SDP/DPE Team
         - Nell Thomas
     validations:
       required: true
