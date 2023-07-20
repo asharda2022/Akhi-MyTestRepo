@@ -69,8 +69,8 @@ body:
       options:
         - Area Champion
         - Area/Team Director
-        - Analytics Engineering (AE)
-        - SDP Team (DPE)
+        - AE (Analytics Engineering)
+        - SDP
         - Nell Thomas
     validations:
       required: true
