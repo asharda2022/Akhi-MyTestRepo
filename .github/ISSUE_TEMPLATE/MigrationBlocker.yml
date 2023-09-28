@@ -1,0 +1,77 @@
+name: Migration Blocker
+description: As part of the Move Shopify to SDP migration mission, this form will track all blockers to migration
+title: "Enter what is blocked here"
+labels: ['Triage','RR','Blocker','MoveToSDP']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## How to use the form:
+        This form is to be used to capture any risks, issues or blockers related to the Move Shopify to SDP mission. Please complete the following steps:
+        1. Enter a title for your work request in the title field above.
+        2. Fill out all fields in the form.
+        3. Assign the issue to the [Ops Support person](https://docs.google.com/document/d/1dS6f4l4XFXJDEFx2DwhQhd8H6kosssq2ZkyPqSOJtuk/edit#heading=h.9gx5ztc5pz3t) from your area in the right hand menu.
+  - type: dropdown
+    id: BlockerType
+    attributes:
+      label: What is blocked?
+         options:
+        - Starscream
+        - Seamster
+        - Mode Report
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: BlockerName
+    attributes:
+      label: List Other or the name of the job / report that is blocked 
+      description: Be specific, enter name of job or report that is blocked. If Other, name exactly what is it 
+    validations:
+      required: true
+  - type: input
+    id: BlockedBy
+    attributes:
+      label: What is it Blocked By
+      description: Be specific, enter name of job or report that is blocking
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description in detail
+      description: Write a description and explain why you think so
+      placeholder: Enter description here
+    validations:
+      required: true
+  - type: dropdown
+    id: pillar
+    attributes:
+      label: What area/pillar is reporting this issue?
+      options:
+        - Core 
+        - Merchant Services
+        - Corporate Data
+        - Commercial Data
+        - Infrastructure
+        - Analytics Engineering
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: teamname
+    attributes:
+      label: Which team? 
+      description: Name of team within the pillar (if you'd like to be specific). 
+      placeholder: Team Name
+    validations:
+      required: false
+  - type: input
+    id: requester
+    attributes:
+      label: Who is reporting the issue? 
+      description: Name of individual(so we can reach out for further details or issue resolution, etc.) 
+      placeholder: Name of requester
+    validations:
+      required: true
