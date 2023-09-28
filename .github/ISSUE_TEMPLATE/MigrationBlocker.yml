@@ -16,7 +16,7 @@ body:
     id: BlockerType
     attributes:
       label: What is blocked?
-         options:
+      options:
         - Starscream
         - Seamster
         - Mode Report
