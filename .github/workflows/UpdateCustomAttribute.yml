@@ -1,0 +1,23 @@
+# This workflow will update a custom attribute based on the label #
+name: U
+on: 
+  issues:
+    types: [labeled]
+  
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/Checkout@v2
+
+      - name: Run script
+        run:
+          // Fetch the issue or PR
+          issue = github_api.get_issue(issue_number)
+
+          // Check the labels
+          for label in issue.labels:
+            if label.name == 'Urgent':
+              // Update the custom attribute
+              github_api.update_custom_attribute(issue_number, 'Priority', 'P1')
