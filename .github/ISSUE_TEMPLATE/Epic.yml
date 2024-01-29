@@ -33,8 +33,8 @@ body:
     attributes:
       label: Open Questions
       description: List open questions, definition of done or any other details here
-  - type: input
-    id: eng-text
-    attributes:
-      label: _Engineering to click on the _Add Tasklist_ button below and add tasks to complete this epic_
-      placeholder: "Leave Empty"
+      value: |
+
+
+
+      _Engineering to click on the _Add Tasklist_ button below and add tasks to complete this epic_
