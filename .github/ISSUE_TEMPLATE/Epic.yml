@@ -17,11 +17,11 @@ body:
   attributes:
     label: Steps to follow
     value: |
-    ### 1. Local environment prep:
-    - Starscream
-    - [ ] Commit or stash local changes
-    - [ ] `git checkout sdp-sandbox`
-    - [ ] `git fetch && git rebase origin/main`
-    - [ ] `dev up`
-    - [ ] `export GOOGLE_CLOUD_PROJECT=shopify-data-starscream && dev mcache purge -y && bin/generate_module_cache`
-    - [ ] `git push origin sdp-sandbox -f`
+      ### 1. Local environment prep:
+      - Starscream
+      - [ ] Commit or stash local changes
+      - [ ] `git checkout sdp-sandbox`
+      - [ ] `git fetch && git rebase origin/main`
+      - [ ] `dev up`
+      - [ ] `export GOOGLE_CLOUD_PROJECT=shopify-data-starscream && dev mcache purge -y && bin/generate_module_cache`
+      - [ ] `git push origin sdp-sandbox -f`
