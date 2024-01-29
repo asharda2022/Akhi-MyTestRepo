@@ -36,5 +36,5 @@ body:
   - type: input
     id: eng-text
     attributes:
-      label: _Engineering to click on the _Add Tasklist_ button below and add tasks to complete this epic
+      label: _Engineering to click on the _Add Tasklist_ button below and add tasks to complete this epic_
       placeholder: "Leave Empty"
