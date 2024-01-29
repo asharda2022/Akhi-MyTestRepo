@@ -7,20 +7,20 @@ body:
 - type: textarea
     id: delivery
     attributes:
-      label: Concise summary of feature to be delivered
-      value: |
+        label: Concise summary of feature to be delivered
+        value: |
         _Concise summary of feature to be delivered_
-      Mini-champion
-      [Designs]()
+        Mini-champion
+        [Designs]()
 
-      * Business Requirements / User Stories
+        * Business Requirements / User Stories
   
-        1.
-        2.
-        3.
-  
-      * Open questions
-      *
+            1.
+            2.
+            3.
+      
+        * Open questions
+        *
       
  - type: checkboxes
     id: terms
