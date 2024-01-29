@@ -9,8 +9,6 @@ id: test
 attributes:
     label: Concise summary of feature to be delivered
     value: |
-    _Concise summary of feature to be delivered_
-    Mini-champion
     [Designs]()
     
     * Business Requirements / User Stories
