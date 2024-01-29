@@ -1,0 +1,82 @@
+name: Legacy Deprecation Tracker update
+description: Generate a checklist for updating the tracker sheet
+title: '[Dev] Update the tracker sheet'
+labels: ['Dev']
+assignees: [TrishGillett]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: When and why
+      description: Is there a special deadline, or is it just a periodic update?
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to follow
+      value: |
+        ### 1. Local environment prep:
+          - Starscream
+            - [ ] Commit or stash local changes
+            - [ ] `git checkout sdp-sandbox`
+            - [ ] `git fetch && git rebase origin/main`
+            - [ ] `dev up`
+            - [ ] `export GOOGLE_CLOUD_PROJECT=shopify-data-starscream && dev mcache purge -y && bin/generate_module_cache`
+            - [ ] `git push origin sdp-sandbox -f`
+          - Monorail
+            - [ ] `git checkout main && git pull`
+          - Seamster
+            - [ ] `git checkout main && git pull`
+        ### 2. Fetch data
+          - On [this Mode report](https://app.mode.com/shopify/reports/2b9c58f5c116)
+            - [ ] Run the report
+            - [ ] Download `dump_overseer_criticality.csv`
+            - [ ] Download `dump_overseer_dependency.csv`
+            - [ ] Download `dump_overseer_seamster.csv`
+            - [ ] Download `dump_run_costs.csv`
+        ### 3. Lock and download the sheet
+          - On the tracker sheet
+            - [ ] Change sharing permissions so that Shopifolk can't edit the sheet
+            - [ ] Write `SHEET LOCKED FOR UPDATES` in cell A1
+            - [ ] Remove the smart chips from column F (responsible individual)
+            - [ ] Download the sheet as a CSV named `sdp_master_sheet_previous.csv`
+            - [ ] Check if anyone has added data to the `Job status migration helper` sheet.
+          - In Python IDE
+            - [ ] In update_sheet.py, delete the contents of the `PLANS` dict.
+            - [ ] If there was data in the migration helper, format it and paste it into `PLANS`
+        ### 4. Generating new data
+          - In a starscream terminal
+            - [ ] `bin/sdp_master_sheet`
+            - [ ] `bin/sdp_export_graph`
+        ### 5. Reassembling the sheet
+          - On the tracker sheet
+            - [ ] Duplicate the Starscream+Seamster sheet, name the new copy Starscream+Seamster-backup.  Switch back to the original version before doing the following.
+            - [ ] Unfreeze columns
+            - [ ] Duplicate the job label column and all human columns, and drag one copy of each to the left edge of the sheet.
+            - [ ] Add two blank rows between rows 3 and 4
+            - [ ] Select the cell just below the `Job label` header, Go to `File -> Import -> Upload`. Drag and drop in the `sdp_master_sheet_merged.csv` file.  Set `Import location` to `Replace data at selected cell` and click `Import data`.
+            - [ ] Scroll across horizontally to make sure the two rows of headers look lined up, then delete rows 3 and 4.
+            - [ ] Delete the imported versions of the `Team use` columns from the right edge of the sheet.
+            - [ ] Open up a filter view.
+            - [ ] For each human column, set the filter view to highlight rows where the column's old and new versions don't match (example formula: `= A3 <> M3`.  Debug and/or correct any issues highlighted.
+            - [ ] Drag the blocker and notes columns back over to join their new versions, and delete their new versions.  For other duplicated columns, delete the old version after the confirmation above.
+            - [ ] Delete the filter view you created.
+            - [ ] Check some existing filter views to see if ranges got messed up.
+            - [ ] Reset A1 back to normal
+            - [ ] Put back formulas:
+              - Column C: `=IFERROR(vlookup(B3,'Email - Vault Team'!A:B,2,FALSE),"Missing")`
+              - Column D: `=IFERROR(vlookup(C3,'Vault Team - Director/Leader'!A:B,2,FALSE),"Missing")`
+              - Column E: `=IFERROR(vlookup(C3,'Vault Team - Director/Leader'!A:C,3,FALSE),"Missing")`
+            - [ ] Convert column F back to a 'people' smart chip.
+            - [ ] Extend the colours, conditional formatting, and data validation to cover all rows
+              - Conditional formatting for col F: `=AND(ISBLANK(F3), H3 <> "DELETED")`
+              - Conditional formatting for col H: Text is exactly `Not planned yet`
+              - Conditional formatting for col I: `=AND(ISBLANK(I3), ISNUMBER(SEARCH("blocked", H3)))`
+              - Conditional formatting for col J: `= AND(H3 <> "DELETED", ISBLANK(J3))`
+              - Conditional formatting for col K: `= AND(ISNUMBER(SEARCH("Migration", H3)), NOT(ISNUMBER(SEARCH("blocked", H3))), ISBLANK(K3))`
+            - [ ] Freeze the first two columns
+            - [ ] Extend the pivot table on the `Progress tracker` tab to use all rows
+            - [ ] Blank out rows 3+ of the `Job status migration helper` after sanity checking that the values were incorporated
+            - [ ] Give Shopifolk edit access again
+        ### 6. Upload graph to GCS bucket
+          - [ ] Go [here](https://console.cloud.google.com/storage/browser/shopify-stg-dw/sdp-discovery-resources;tab=objects?project=shopify-stg-dw&prefix=&forceOnObjectsSortingFiltering=false) and paste in the new graph pickles
