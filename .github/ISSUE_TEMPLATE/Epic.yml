@@ -4,22 +4,6 @@ title: '[Epic]: '
 labels: 'Epic'
 assignees: ''
 body:
-- type: textarea
-id: test
-attributes:
-    label: Concise summary of feature to be delivered
-    value: |
-    [Designs]()
-    
-    * Business Requirements / User Stories
-    
-        1.
-        2.
-        3.
-    
-    * Open questions
-    *
-      
 - type: checkboxes
 id: terms
 attributes:
