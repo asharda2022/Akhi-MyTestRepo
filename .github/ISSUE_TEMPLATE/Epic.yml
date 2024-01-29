@@ -1,33 +1,33 @@
+---
 name: Epic
 description: Requirements, considerations, definition of done for a feature
-title: '[Epic] '
-labels: ['Epic']
+title: "[Epic] "
+labels:
+  - Epic
 assignees: []
 body:
   - type: input
     id: summary
     attributes:
-      label: Concise summary of feature to be delivered 
+      label: Concise summary of feature to be delivered
     validations:
       required: true
   - type: input
     id: design
     attributes:
       label: Design link
-      value: [Designs]()
+      value: "[Designs]()"
     validations:
       required: true
-   - type: textarea
-     id: brd
-     attributes:
-       label: BRD / Stories
-       description: List all the business requirements / stories associated with this Epic and Design
-       value: |
-       1. 
-       2. 
-       3. 
-     validations:
-       required: false
+  - type: textarea
+    id: brd
+    attributes:
+      label: BRD / Stories
+      description: List all the business requirements / stories associated with this
+        Epic and Design
+      placeholder: List 1, 2, 3...
+    validations:
+      required: false
   - type: textarea
     id: open-questions
     attributes:
@@ -35,5 +35,6 @@ body:
       description: List open questions, definition of done or any other details here
   - type: markdown
     attributes:
-      value: |
-        Engineering to click on the "Add Tasklist" button below and add all Engineering Tasks related to this Epic
+      value: >
+        Engineering to click on the "Add Tasklist" button below and add all
+        Engineering Tasks related to this Epic
