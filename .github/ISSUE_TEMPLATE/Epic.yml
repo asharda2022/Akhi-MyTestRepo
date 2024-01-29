@@ -33,7 +33,7 @@ body:
     attributes:
       label: Open Questions
       description: List open questions, definition of done or any other details here
-  - type: markdown
+  - type: input
     attributes:
       value: >
         Engineering to click on the "Add Tasklist" button below and add all
