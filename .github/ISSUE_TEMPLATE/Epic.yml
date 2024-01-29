@@ -1,11 +1,9 @@
----
 name: Epic
 about: Requirements, considerations, definition of done for a feature
 title: ''
 labels: 'Epic'
 assignees: ''
-
----
+body:
 
 _Concise summary of feature to be delivered_
 Mini-champion:
@@ -20,7 +18,17 @@ Mini-champion:
 * Open questions
   *
 
+ - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+   
 ```[tasklist]
 ### Engineering Tasks to complete the Epic
+
 - [ ]
 - [ ]
