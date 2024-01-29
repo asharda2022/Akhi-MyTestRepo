@@ -34,6 +34,6 @@ body:
       label: Open Questions
       description: List open questions, definition of done or any other details here
       value: |
-      Open questions
-      &nbsp;
-      _Engineering to click on the _Add Tasklist_ button below and add tasks to complete this epic_
+        Open questions
+        &nbsp;
+        _Engineering to click on the _Add Tasklist_ button below and add tasks to complete this epic_
