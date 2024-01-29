@@ -6,9 +6,9 @@ assignees: ''
 body:
 - type: textarea
 id: test
-    attributes:
-        label: Concise summary of feature to be delivered
-        value: |
+attributes:
+    label: Concise summary of feature to be delivered
+    value: |
         _Concise summary of feature to be delivered_
         Mini-champion
         [Designs]()
@@ -22,20 +22,20 @@ id: test
         * Open questions
         *
       
- - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
+- type: checkboxes
+id: terms
+attributes:
+    label: Code of Conduct
+    description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+    options:
         - label: I agree to follow this project's Code of Conduct
           required: true
    
 - type: textarea
-    id: steps
-    attributes:
-      label: Steps to follow
-      value: |
+id: steps
+attributes:
+    label: Steps to follow
+    value: |
         ### 1. Local environment prep:
           - Starscream
             - [ ] Commit or stash local changes
