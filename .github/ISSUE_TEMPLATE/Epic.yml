@@ -1,7 +1,8 @@
 name: Epic
 description: Requirements, considerations, definition of done for a feature
 title: '[Epic]: '
-labels: 'Epic'
+labels: ['Epic']
+assignees: []
 body:
 - type: checkboxes
   id: terms
