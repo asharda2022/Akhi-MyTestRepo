@@ -4,10 +4,12 @@ title: ''
 labels: 'Epic'
 assignees: ''
 body:
-- type: markdown
+- type: textarea
+    id: delivery
     attributes:
+      label: Concise summary of feature to be delivered
       value: |
-      _Concise summary of feature to be delivered_
+        _Concise summary of feature to be delivered_
       Mini-champion
       [Designs]()
 
@@ -19,7 +21,7 @@ body:
   
       * Open questions
       *
-
+      
  - type: checkboxes
     id: terms
     attributes:
