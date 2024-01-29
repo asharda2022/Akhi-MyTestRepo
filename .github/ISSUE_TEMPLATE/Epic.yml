@@ -4,19 +4,21 @@ title: ''
 labels: 'Epic'
 assignees: ''
 body:
+- type: markdown
+    attributes:
+      value: |
+      _Concise summary of feature to be delivered_
+      Mini-champion
+      [Designs]()
 
-_Concise summary of feature to be delivered_
-Mini-champion:
-[Designs]()
-
-* Business Requirements / User Stories
+      * Business Requirements / User Stories
   
-  1.
-  2.
-  3.
+        1.
+        2.
+        3.
   
-* Open questions
-  *
+      * Open questions
+      *
 
  - type: checkboxes
     id: terms
