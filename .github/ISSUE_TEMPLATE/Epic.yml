@@ -1,11 +1,11 @@
 name: Epic
 about: Requirements, considerations, definition of done for a feature
-title: ''
+title: '[Epic]: '
 labels: 'Epic'
 assignees: ''
 body:
 - type: textarea
-    id: delivery
+    id: description
     attributes:
         label: Concise summary of feature to be delivered
         value: |
