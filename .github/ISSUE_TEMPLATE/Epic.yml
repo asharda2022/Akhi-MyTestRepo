@@ -34,9 +34,9 @@ body:
       label: Open Questions
       description: List open questions, definition of done or any other details here
   - type: input
-    id: Eng-text
+    id: eng-text
     attributes:
-      description: Leave this text as-is
+      label: Leave this text as-is
       value: >
         Engineering to click on the "Add Tasklist" button below and add all
         Engineering Tasks related to this Epic
