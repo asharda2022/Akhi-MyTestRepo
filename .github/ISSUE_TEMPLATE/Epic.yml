@@ -4,30 +4,30 @@ title: '[Epic] '
 labels: ['Epic']
 assignees: []
 body:
- - type: input
+  - type: input
     id: summary
     attributes:
       label: Concise summary of feature to be delivered 
     validations:
       required: true
- - type: input
+  - type: input
     id: design
     attributes:
       label: Design link
       value: [Designs]()
     validations:
       required: true
-  - type: textarea
-    id: brd
-    attributes:
-      label: BRD / Stories
-      description: List all the business requirements / stories associated with this Epic and Design
-      value: |
-      1. 
-      2. 
-      3. 
-    validations:
-      required: false
+   - type: textarea
+     id: brd
+     attributes:
+       label: BRD / Stories
+       description: List all the business requirements / stories associated with this Epic and Design
+       value: |
+       1. 
+       2. 
+       3. 
+     validations:
+       required: false
   - type: textarea
     id: open-questions
     attributes:
