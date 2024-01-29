@@ -4,24 +4,36 @@ title: '[Epic] '
 labels: ['Epic']
 assignees: []
 body:
-- type: checkboxes
-  id: terms
-  attributes:
-    label: Code of Conduct
-    description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-    options:
-      - label: I agree to follow this project's Code of Conduct
-        required: true
-- type: textarea
-  id: steps
-  attributes:
-    label: Steps to follow
-    value: |
-      ### 1. Local environment prep:
-      - Starscream
-      - [ ] Commit or stash local changes
-      - [ ] `git checkout sdp-sandbox`
-      - [ ] `git fetch && git rebase origin/main`
-      - [ ] `dev up`
-      - [ ] `export GOOGLE_CLOUD_PROJECT=shopify-data-starscream && dev mcache purge -y && bin/generate_module_cache`
-      - [ ] `git push origin sdp-sandbox -f`
+ - type: input
+    id: summary
+    attributes:
+      label: Concise summary of feature to be delivered 
+    validations:
+      required: true
+ - type: input
+    id: design
+    attributes:
+      label: Design link
+      value: [Designs]()
+    validations:
+      required: true
+  - type: textarea
+    id: brd
+    attributes:
+      label: BRD / Stories
+      description: List all the business requirements / stories associated with this Epic and Design
+      value: |
+      1. 
+      2. 
+      3. 
+    validations:
+      required: false
+  - type: textarea
+    id: open-questions
+    attributes:
+      label: Open Questions
+      description: List open questions, definition of done or any other details here
+  - type: markdown
+    attributes:
+      value: |
+        Engineering to click on the "Add Tasklist" button below and add all Engineering Tasks related to this Epic
