@@ -1,6 +1,6 @@
 name: Epic
 description: Requirements, considerations, definition of done for a feature
-title: '[Epic]: '
+title: '[Epic] '
 labels: ['Epic']
 assignees: []
 body:
