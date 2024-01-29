@@ -2,7 +2,7 @@ name: Epic
 description: Requirements, considerations, definition of done for a feature
 title: '[Epic]: '
 labels: 'Epic'
-assignees:
+assignees: ''
 body:
 - type: checkboxes
   id: terms
@@ -10,8 +10,8 @@ body:
     label: Code of Conduct
     description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
     options:
-      label: I agree to follow this project's Code of Conduct
-      required: true
+      - label: I agree to follow this project's Code of Conduct
+        required: true
 - type: textarea
   id: steps
   attributes:
