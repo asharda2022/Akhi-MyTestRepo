@@ -36,7 +36,5 @@ body:
   - type: input
     id: eng-text
     attributes:
-      label: Leave this text as-is
-      value: >
-        Engineering to click on the "Add Tasklist" button below and add all
-        Engineering Tasks related to this Epic
+      label: Engineering to click on the _Add Tasklist_ button below and add all Engineering Tasks related to this Epic
+      placeholder: "Leave Empty"
