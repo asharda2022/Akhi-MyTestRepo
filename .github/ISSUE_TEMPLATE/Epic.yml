@@ -5,7 +5,7 @@ labels: 'Epic'
 assignees: ''
 body:
 - type: textarea
-    id: description
+    id: test
     attributes:
         label: Concise summary of feature to be delivered
         value: |
