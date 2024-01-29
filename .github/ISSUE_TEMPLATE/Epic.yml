@@ -5,17 +5,17 @@ labels: 'Epic'
 assignees: ''
 body:
 - type: checkboxes
-id: terms
-attributes:
+  id: terms
+  attributes:
     label: Code of Conduct
     description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
     options:
-        - label: I agree to follow this project's Code of Conduct
+      - label: I agree to follow this project's Code of Conduct
           required: true
    
 - type: textarea
-id: steps
-attributes:
+  id: steps
+  attributes:
     label: Steps to follow
     value: |
     ### 1. Local environment prep:
