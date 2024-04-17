@@ -1,0 +1,34 @@
+name: "Set SLA"
+on:
+  issues:
+    types: [opened, reopened, labeled, unlabeled]
+
+jobs:
+  my_job:
+    name: Triage bot
+    runs-on: shopify-ubuntu-latest
+    steps:
+      - name: Add the issue to the Buyer Trust project
+        id: add-to-project
+        uses: actions/add-to-project@v1.0.1
+        with:
+          project-url: https://github.com/orgs/Shopify/projects/5411
+          github-token: ${{ secrets.WORKFLOW_GH_TOKEN }}
+          labeled: Bug
+      - name: Calculate the "Fix by" date
+        id: calculate-fix-by
+        uses: Shopify/github-actions/calculate-fix-by-date@v1
+        with:
+          github-token: ${{ secrets.WORKFLOW_GH_TOKEN }}
+          days-to-fix-sev-1: '1'
+          days-to-fix-sev-2: '7'
+          days-to-fix-sev-3: '30'
+          days-to-fix-sev-4: '90'
+      - name: And apply it to the project data
+        id: update-project-item-fields
+        uses: Shopify/github-actions/update-project-item-fields-action@v1
+        with:
+          github-token: ${{ secrets.WORKFLOW_GH_TOKEN }}
+          project-number: 5411
+          project-item-id: ${{ steps.add-to-project.outputs.itemId }}
+          fields: ${{ steps.calculate-fix-by.outputs.result }}
